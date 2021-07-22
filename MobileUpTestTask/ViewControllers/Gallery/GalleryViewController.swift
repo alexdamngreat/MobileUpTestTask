@@ -11,6 +11,7 @@ class GalleryViewController: ViewController {
   
   var images = [#imageLiteral(resourceName: "photo_2017-06-22_21-33-16"), #imageLiteral(resourceName: "photo_2017-06-22_21-33-16"), #imageLiteral(resourceName: "photo_2017-06-22_21-33-16"), #imageLiteral(resourceName: "photo_2017-06-22_21-33-16")]
   let countCells = 2
+  let indent: CGFloat = 2.0
   
   @IBOutlet weak var collectionView: UICollectionView!
   
@@ -27,8 +28,9 @@ extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDel
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-    cell.photoVIew.image = images[indexPath.item]
+    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as? CollectionViewCell else { return UICollectionViewCell() }
+    let image = images[indexPath.item]
+    cell.photoVIew.image = image
     return cell
   }
   
@@ -37,8 +39,9 @@ extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDel
     let frame = collectionView.frame
     let widthCell = frame.width / CGFloat(countCells)
     let heightCell = widthCell
+    let spacing = CGFloat(countCells + 1) * indent / CGFloat(countCells)
     
-    return CGSize(width: widthCell, height: heightCell)
+    return CGSize(width: widthCell - spacing, height: heightCell - (indent * 2))
   }
   
 }
