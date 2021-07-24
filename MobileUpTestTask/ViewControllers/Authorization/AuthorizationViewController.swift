@@ -19,7 +19,12 @@ class AuthorizationViewController: UIViewController, WKNavigationDelegate {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    if let token = KeychainWrapper.standard.string(forKey: "MobileUpToken"){
+
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(true)
+    if let token = KeychainWrapper.standard.string(forKey: "MobileUpTokenVK"){
       Session.shared.token = token
       login()
       return
@@ -27,18 +32,19 @@ class AuthorizationViewController: UIViewController, WKNavigationDelegate {
     authorizationVK()
   }
   
+  
   private func authorizationVK() {
     var urlComponents = URLComponents()
     urlComponents.scheme = "https"
     urlComponents.host = "oauth.vk.com"
     urlComponents.path = "/authorize"
     urlComponents.queryItems = [
-      URLQueryItem(name: "client_id", value: "7908727"),
+      URLQueryItem(name: "client_id", value: "7910126"),
       URLQueryItem(name: "display", value: "mobile"),
       URLQueryItem(name: "redirect_uri", value: "https://oauth.vk.com/blank.html"),
       URLQueryItem(name: "scope", value: "262150"),
       URLQueryItem(name: "response_type", value: "token"),
-      URLQueryItem(name: "v", value: "5.131")
+      URLQueryItem(name: "v", value: "5.77")
     ]
   
     let request = URLRequest(url: urlComponents.url!)
@@ -64,7 +70,7 @@ class AuthorizationViewController: UIViewController, WKNavigationDelegate {
       }
   
     if let token = params["access_token"] {
-      KeychainWrapper.standard.set(token,forKey: "MobileUpToken")
+      KeychainWrapper.standard.set(token,forKey: "MobileUpTokenVK")
       Session.shared.token = token
       login()
     }

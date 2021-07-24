@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftKeychainWrapper
 
 class ViewController: UIViewController {
   
@@ -33,6 +34,15 @@ class ViewController: UIViewController {
     loginButton.titleLabel?.font = UIFont(name: "SFProDisplay-Medium", size: 18)
     loginButton.titleLabel?.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
   }
+  
+//  override func viewDidAppear(_ animated: Bool) {
+//    super.viewDidAppear(false)
+//
+//    if let token = KeychainWrapper.standard.string(forKey: "MobileUpToken") {
+//      Session.shared.token = token
+//      performSegue(withIdentifier: "noNeedToLoginSegue", sender: nil)
+//    }
+//  }
 }
 
 
