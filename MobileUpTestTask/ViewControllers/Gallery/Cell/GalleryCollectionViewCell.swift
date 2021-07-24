@@ -7,13 +7,19 @@
 
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell {
+class GalleryCollectionViewCell: UICollectionViewCell {
+  var savePhoto: UIImage?
   
   @IBOutlet weak var photoVIew: UIImageView!
   
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
+  
+  func configure(url: URL) {
+    photoVIew.kf.indicatorType = .activity
+    photoVIew.kf.setImage(with: url)
+    
+    savePhoto = photoVIew.image
+  }
 }
