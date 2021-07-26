@@ -9,14 +9,16 @@ import UIKit
 import SwiftKeychainWrapper
 
 class ViewController: UIViewController {
+  let apiService = APIVkontakte()
   
-  @IBOutlet weak var titleLabel: UILabel! 
+  @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var loginButton: UIButton!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     view.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
+    navigationController?.navigationBar.isHidden = true
 
     titleLabel.frame = CGRect(x: 0, y: 0, width: 327, height: 120)
     titleLabel.backgroundColor = .clear
@@ -33,17 +35,11 @@ class ViewController: UIViewController {
     loginButton.layer.cornerRadius = 8
     loginButton.titleLabel?.font = UIFont(name: "SFProDisplay-Medium", size: 18)
     loginButton.titleLabel?.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+
   }
   
-//  override func viewDidAppear(_ animated: Bool) {
-//    super.viewDidAppear(false)
-//
-//    if let token = KeychainWrapper.standard.string(forKey: "MobileUpToken") {
-//      Session.shared.token = token
-//      performSegue(withIdentifier: "noNeedToLoginSegue", sender: nil)
-//    }
-//  }
 }
+
 
 
 

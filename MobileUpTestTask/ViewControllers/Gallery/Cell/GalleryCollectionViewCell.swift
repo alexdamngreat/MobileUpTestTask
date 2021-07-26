@@ -19,7 +19,5 @@ class GalleryCollectionViewCell: UICollectionViewCell {
   func configure(url: URL) {
     photoVIew.kf.indicatorType = .activity
     photoVIew.kf.setImage(with: url)
-    
-    savePhoto = photoVIew.image
   }
 }

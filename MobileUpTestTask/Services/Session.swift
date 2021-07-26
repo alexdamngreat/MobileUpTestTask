@@ -2,15 +2,15 @@
 //  Session.swift
 //  MobileUpTestTask
 //
-//  Created by Александр Тимофеев on 22.07.2021.
+//  Created by Александр Тимофеев on 26.07.2021.
 //
 
 import Foundation
 
-final class Session: NSObject {
+class Session {
   static let shared = Session()
   
-  override init() {}
+  init() {}
   
   var token = ""
 }

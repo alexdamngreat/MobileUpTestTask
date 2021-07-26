@@ -19,7 +19,6 @@ class AuthorizationViewController: UIViewController, WKNavigationDelegate {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -32,9 +31,9 @@ class AuthorizationViewController: UIViewController, WKNavigationDelegate {
     authorizationVK()
   }
   
-  
   private func authorizationVK() {
     var urlComponents = URLComponents()
+    
     urlComponents.scheme = "https"
     urlComponents.host = "oauth.vk.com"
     urlComponents.path = "/authorize"
@@ -76,6 +75,8 @@ class AuthorizationViewController: UIViewController, WKNavigationDelegate {
     }
     decisionHandler(.cancel)
   }
+  
+ 
   
   func login() {
     performSegue(withIdentifier: "loginSegue", sender: nil)

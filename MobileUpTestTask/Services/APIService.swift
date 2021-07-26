@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import SwiftKeychainWrapper
 
 class APIVkontakte {
   let baseURL = "https://api.vk.com/method"
@@ -15,6 +16,7 @@ class APIVkontakte {
   let version = "5.77"
   
   func getGroupPhotos(complition: @escaping([Photo]) -> ()) {
+    
     let method = "/photos.get"
     let parameters: Parameters = [
       "owner_id": groupID,
@@ -27,11 +29,12 @@ class APIVkontakte {
     let url = baseURL + method
     
     AF.request(url, method: .get, parameters: parameters).responseData { response in
-      guard let data = response.data else { return }
-      print(data.prettyJSON as Any)
-      guard let photoResponse = try? JSONDecoder().decode(Photos.self, from: data) else { return }
-      let photos = photoResponse.response.items
       
+      guard let data = response.data else { return }
+      guard let photoResponse = try? JSONDecoder().decode(Photos.self, from: data) else { return }
+      
+      let photos = photoResponse.response.items
+      print(data.prettyJSON as Any)
       DispatchQueue.main.async {
         complition(photos)
       }
@@ -49,3 +52,4 @@ extension Data {
     return prettyPrintedString
   }
 }
+

@@ -65,14 +65,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="NtQ-XI-vBA"/>
                     <connections>
-                        <outlet property="loginButton" destination="uGp-uQ-qZA" id="IVv-Bs-etB"/>
-                        <outlet property="titleLabel" destination="8kb-a9-DSx" id="9fQ-gl-2Zf"/>
-                        <segue destination="EmR-T2-rDK" kind="presentation" identifier="noNeedToLoginSegue" modalPresentationStyle="fullScreen" id="jK5-tm-r0d"/>
+                        <outlet property="loginButton" destination="uGp-uQ-qZA" id="d5m-dd-gTK"/>
+                        <outlet property="titleLabel" destination="8kb-a9-DSx" id="yIb-eT-dhz"/>
+                        <segue destination="EmR-T2-rDK" kind="presentation" identifier="forceLoginSegue" id="8rS-Hn-Llb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="148" y="260"/>
+            <point key="canvasLocation" x="-1142" y="260"/>
         </scene>
         <!--Authorization View Controller-->
         <scene sceneID="1RX-1j-mgr">
@@ -108,12 +108,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="57m-fl-WOY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1006" y="603"/>
+            <point key="canvasLocation" x="-358" y="676"/>
         </scene>
         <!--Mobile Up Gallery-->
         <scene sceneID="jA3-DN-9mx">
             <objects>
-                <viewController id="6Nd-WF-Jkd" customClass="GalleryViewController" customModule="MobileUpTestTask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="6Nd-WF-Jkd" customClass="GalleryViewController" customModule="MobileUpTestTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bKS-qQ-AvR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,17 +129,6 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pkn-6i-F3A">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="18"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Mobile Up Gallery" id="fea-gG-nWK"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xbC-3k-rYg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -150,7 +139,24 @@
                             <constraint firstItem="3bT-i3-7wT" firstAttribute="top" secondItem="xbC-3k-rYg" secondAttribute="top" id="zdA-ih-UuD"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Mobile Up Gallery" id="Qi6-Np-oER"/>
+                    <navigationItem key="navigationItem" title="Mobile Up Gallery" id="Qi6-Np-oER">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="X5C-rw-bd6">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" id="j5z-EM-C8S">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="O3D-ci-mNo">
+                                <rect key="frame" x="302" y="5" width="92" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="18"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Выход"/>
+                                <connections>
+                                    <action selector="logout:" destination="6Nd-WF-Jkd" eventType="touchUpInside" id="6ZK-sK-1Xq"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="logoutSegue" modalPresentationStyle="fullScreen" id="4QY-Gr-txX"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="3bT-i3-7wT" id="ux7-G5-AId"/>
                         <segue destination="cy0-im-ayy" kind="show" identifier="galleryToFullScreenSegue" id="cDn-xE-aXv"/>
@@ -158,12 +164,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t8N-L8-Ih1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2789.8550724637685" y="259.82142857142856"/>
+            <point key="canvasLocation" x="1428" y="260"/>
         </scene>
         <!--Title-->
         <scene sceneID="3uD-6a-TQt">
             <objects>
-                <viewController storyboardIdentifier="FullScreenViewController" id="cy0-im-ayy" customClass="FullScreenViewController" customModule="MobileUpTestTask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FullScreenViewController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="cy0-im-ayy" customClass="FullScreenViewController" customModule="MobileUpTestTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eGk-qs-0HB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -190,11 +196,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="FaA-wZ-3pB">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="fBA-9u-W5D"/>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="NAu-rV-sMh">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="fBA-9u-W5D">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" id="NAu-rV-sMh">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4z2-ch-YBp">
                                 <rect key="frame" x="321" y="10.666666666666664" width="73" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="square.and.arrow.up" catalog="system"/>
                                 <connections>
                                     <action selector="shareButton:" destination="cy0-im-ayy" eventType="touchUpInside" id="idg-LV-jY9"/>
@@ -208,12 +217,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4f-0g-lGt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3582.608695652174" y="259.82142857142856"/>
+            <point key="canvasLocation" x="2377" y="260"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ui1-wx-8rD">
             <objects>
-                <navigationController id="EmR-T2-rDK" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" id="EmR-T2-rDK" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="dEr-Ey-dnv"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3kJ-ff-DCe">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -225,11 +234,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EYM-2T-snh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1854" y="260"/>
+            <point key="canvasLocation" x="446" y="260"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="DOq-Cv-C7T"/>
+        <segue reference="8rS-Hn-Llb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>

@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		33B6F007A1638CB72A66519F /* Pods_MobileUpTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 390FA6692666B66761EFF140 /* Pods_MobileUpTestTask.framework */; };
+		6A1EA93E26AF091900F09AB4 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1EA93D26AF091900F09AB4 /* Session.swift */; };
 		6A2BE32626A99DD5007D19DE /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2BE32526A99DD5007D19DE /* Photo.swift */; };
 		6A45DF1426A88EBE00A4D3F0 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6A45DF1326A88EBD00A4D3F0 /* SF-Pro-Display-Bold.otf */; };
 		6A45DF1826A8A4C600A4D3F0 /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6A45DF1726A8A4C500A4D3F0 /* SF-Pro-Display-Medium.otf */; };
-		6A45DF2426A8C68800A4D3F0 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A45DF2326A8C68800A4D3F0 /* Session.swift */; };
 		6A45DF2926A8C7D500A4D3F0 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A45DF2826A8C7D500A4D3F0 /* AuthorizationViewController.swift */; };
 		6A45DF3126A8CFC800A4D3F0 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A45DF2F26A8CFC800A4D3F0 /* GalleryCollectionViewCell.swift */; };
 		6A45DF3226A8CFC800A4D3F0 /* GalleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A45DF3026A8CFC800A4D3F0 /* GalleryCollectionViewCell.xib */; };
@@ -23,20 +23,21 @@
 		6ABE069526A86E0E0058CD84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ABE069326A86E0E0058CD84 /* Main.storyboard */; };
 		6ABE069726A86E1F0058CD84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ABE069626A86E1F0058CD84 /* Assets.xcassets */; };
 		6ABE069A26A86E1F0058CD84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ABE069826A86E1F0058CD84 /* LaunchScreen.storyboard */; };
-		6AC7F9E526AAD8F300DD01D8 /* PhotoDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7F9E426AAD8F300DD01D8 /* PhotoDataStorage.swift */; };
 		6AC7F9EF26AB015500DD01D8 /* FullScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7F9ED26AB015500DD01D8 /* FullScreenCollectionViewCell.swift */; };
 		6AC7F9F026AB015500DD01D8 /* FullScreenCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AC7F9EE26AB015500DD01D8 /* FullScreenCollectionViewCell.xib */; };
 		6AC7F9F826AB02E600DD01D8 /* FullScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7F9F726AB02E600DD01D8 /* FullScreenViewController.swift */; };
+		6AC7F9FF26AC639A00DD01D8 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6AC7F9FE26AC639A00DD01D8 /* SF-Pro-Display-Semibold.otf */; };
+		6AC7FA0226AD8ED100DD01D8 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7FA0126AD8ED100DD01D8 /* Error.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		12D769EF51799F496E3529D0 /* Pods-MobileUpTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileUpTestTask.debug.xcconfig"; path = "Target Support Files/Pods-MobileUpTestTask/Pods-MobileUpTestTask.debug.xcconfig"; sourceTree = "<group>"; };
 		17B516406BF5D8FA403D88A1 /* Pods-MobileUpTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileUpTestTask.release.xcconfig"; path = "Target Support Files/Pods-MobileUpTestTask/Pods-MobileUpTestTask.release.xcconfig"; sourceTree = "<group>"; };
 		390FA6692666B66761EFF140 /* Pods_MobileUpTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileUpTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A1EA93D26AF091900F09AB4 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		6A2BE32526A99DD5007D19DE /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		6A45DF1326A88EBD00A4D3F0 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
 		6A45DF1726A8A4C500A4D3F0 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
-		6A45DF2326A8C68800A4D3F0 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		6A45DF2826A8C7D500A4D3F0 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		6A45DF2F26A8CFC800A4D3F0 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		6A45DF3026A8CFC800A4D3F0 /* GalleryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -50,10 +51,11 @@
 		6ABE069626A86E1F0058CD84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6ABE069926A86E1F0058CD84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6ABE069B26A86E1F0058CD84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6AC7F9E426AAD8F300DD01D8 /* PhotoDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDataStorage.swift; sourceTree = "<group>"; };
 		6AC7F9ED26AB015500DD01D8 /* FullScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenCollectionViewCell.swift; sourceTree = "<group>"; };
 		6AC7F9EE26AB015500DD01D8 /* FullScreenCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FullScreenCollectionViewCell.xib; sourceTree = "<group>"; };
 		6AC7F9F726AB02E600DD01D8 /* FullScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenViewController.swift; sourceTree = "<group>"; };
+		6AC7F9FE26AC639A00DD01D8 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
+		6AC7FA0126AD8ED100DD01D8 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				6A2BE32526A99DD5007D19DE /* Photo.swift */,
+				6AC7FA0126AD8ED100DD01D8 /* Error.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -87,6 +90,7 @@
 		6A45DF1A26A8A5A300A4D3F0 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				6AC7F9FE26AC639A00DD01D8 /* SF-Pro-Display-Semibold.otf */,
 				6A45DF1726A8A4C500A4D3F0 /* SF-Pro-Display-Medium.otf */,
 				6A45DF1326A88EBD00A4D3F0 /* SF-Pro-Display-Bold.otf */,
 			);
@@ -96,9 +100,8 @@
 		6A45DF2226A8C65600A4D3F0 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				6A45DF2326A8C68800A4D3F0 /* Session.swift */,
 				6AAED2E926A98724006CFD3D /* APIService.swift */,
-				6AC7F9E426AAD8F300DD01D8 /* PhotoDataStorage.swift */,
+				6A1EA93D26AF091900F09AB4 /* Session.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -106,8 +109,8 @@
 		6A45DF2C26A8CF0D00A4D3F0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				6AC7F9E726AAE9BD00DD01D8 /* Authorization */,
 				6A45DF2D26A8CF8C00A4D3F0 /* Initial */,
+				6AC7F9E726AAE9BD00DD01D8 /* Authorization */,
 				6A45DF2E26A8CF9800A4D3F0 /* Gallery */,
 				6AC7F9E826AAE9D500DD01D8 /* FullScreenGallery */,
 			);
@@ -269,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AC7F9FF26AC639A00DD01D8 /* SF-Pro-Display-Semibold.otf in Resources */,
 				6ABE069A26A86E1F0058CD84 /* LaunchScreen.storyboard in Resources */,
 				6ABE069726A86E1F0058CD84 /* Assets.xcassets in Resources */,
 				6AC7F9F026AB015500DD01D8 /* FullScreenCollectionViewCell.xib in Resources */,
@@ -328,15 +332,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A45DF2426A8C68800A4D3F0 /* Session.swift in Sources */,
 				6A45DF3E26A8DE0B00A4D3F0 /* GalleryViewController.swift in Sources */,
 				6ABE069226A86E0E0058CD84 /* ViewController.swift in Sources */,
 				6A2BE32626A99DD5007D19DE /* Photo.swift in Sources */,
+				6AC7FA0226AD8ED100DD01D8 /* Error.swift in Sources */,
 				6A45DF3126A8CFC800A4D3F0 /* GalleryCollectionViewCell.swift in Sources */,
 				6ABE068E26A86E0E0058CD84 /* AppDelegate.swift in Sources */,
-				6AC7F9E526AAD8F300DD01D8 /* PhotoDataStorage.swift in Sources */,
 				6A45DF2926A8C7D500A4D3F0 /* AuthorizationViewController.swift in Sources */,
 				6AAED2EA26A98724006CFD3D /* APIService.swift in Sources */,
+				6A1EA93E26AF091900F09AB4 /* Session.swift in Sources */,
 				6ABE069026A86E0E0058CD84 /* SceneDelegate.swift in Sources */,
 				6AC7F9EF26AB015500DD01D8 /* FullScreenCollectionViewCell.swift in Sources */,
 				6AC7F9F826AB02E600DD01D8 /* FullScreenViewController.swift in Sources */,
