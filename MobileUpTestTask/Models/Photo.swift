@@ -36,13 +36,12 @@ struct Photo: Codable {
         case ownerID = "owner_id"
     }
   
-  // MARK: - Size
+  // MARK: - Size / Url
   struct Size: Codable {
       let width, height: Int
       let url: String
       let type: String
   }
-  
 }
 
 

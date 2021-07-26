@@ -7,20 +7,17 @@
 
 import UIKit
 
-class FullScreenViewController: ViewController {
+class FullScreenViewController: UIViewController {
   let fullScreenCellID = "fullScreenCell"
-  var photoArray = [Photo]()
-  //var photoArray = PhotoDataStorage.shared.photos
   let countOFCells = 1
+  var photoArray = [Photo]()
   var indexPath: IndexPath!
-  let date = Date()
+
   
   @IBOutlet weak var fullScreenView: UICollectionView!
   
   @IBAction func shareButton(_ sender: UIButton) {
-    
-    let items: [Any] = ["Text"]
-    
+    let items: [Any] = ["Поделиться фотографией"]
     let avc = UIActivityViewController(activityItems: items, applicationActivities: nil)
     self.present(avc, animated: true, completion: nil)
   }
@@ -32,18 +29,14 @@ class FullScreenViewController: ViewController {
     fullScreenView.performBatchUpdates(nil) { result in
       self.fullScreenView.scrollToItem(at: self.indexPath, at: .centeredHorizontally, animated: false)
     }
-    
-    let dateFormatter = DateFormatter()
-    dateFormatter.timeZone = .current
-    dateFormatter.locale = .current
-    dateFormatter.dateFormat = "MM.dd.yyyy"
-    title = dateFormatter.string(from: date)
-    //title = String(photoArray[indexPath.item].date)
   }
 }
 
 extension FullScreenViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
   
+  func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+    
+  }
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return photoArray.count
@@ -51,9 +44,8 @@ extension FullScreenViewController: UICollectionViewDataSource, UICollectionView
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
-      guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: fullScreenCellID, for: indexPath) as? FullScreenCollectionViewCell else { return UICollectionViewCell() }
+    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: fullScreenCellID, for: indexPath) as? FullScreenCollectionViewCell else { return UICollectionViewCell() }
     let strUrl = URL(string: photoArray[indexPath.item].sizes.last!.url)
-    
     cell.configure(url: strUrl!)
     return cell
   }
@@ -66,6 +58,4 @@ extension FullScreenViewController: UICollectionViewDataSource, UICollectionView
     
     return CGSize(width: widthCell, height: heighCell)
   }
-  
-
 }

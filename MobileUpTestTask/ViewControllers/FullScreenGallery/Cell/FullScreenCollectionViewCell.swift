@@ -23,6 +23,7 @@ class FullScreenCollectionViewCell: UICollectionViewCell, UIScrollViewDelegate {
   func configure(url: URL) {
     fullScreenPhoto.kf.indicatorType = .activity
     fullScreenPhoto.kf.setImage(with: url)
+    
   }
   
   func viewForZooming(in scrollView: UIScrollView) -> UIView? {
